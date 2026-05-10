@@ -110,19 +110,57 @@ The `Dataloader` provides random access to episodes and time steps as a nested l
 
 ## Camera Intrinsics (realsense D435)
 
-```
-H1:
-        fx = 392.03189
-        fy = 392.03189
-        cx = 320.19580
-        cy = 235.58174
+Calibrations for the Intel RealSense D435 used with each robot platform.
 
-G1:
-        fx = 389.07278
-        fy = 389.07278
-        cx = 321.61887
-        cy = 238.43630
-```
+### H1
+
+#### Color Intrinsics
+- **Resolution:** `640 × 480`
+- **Model:** `distortion.inverse_brown_conrady`
+- **Focal length:** `fx = 606.8150634765625`, `fy = 606.3350219726562`
+- **Principal point:** `cx = 321.4926452636719`, `cy = 247.55596923828125`
+- **Distortion coefficients:** `[0.0, 0.0, 0.0, 0.0, 0.0]`
+
+#### Depth Intrinsics
+- **Resolution:** `640 × 480`
+- **Model:** `distortion.brown_conrady`
+- **Focal length:** `fx = 392.0318908691406`, `fy = 392.0318908691406`
+- **Principal point:** `cx = 320.19580078125`, `cy = 235.5817413330078`
+- **Distortion coefficients:** `[0.0, 0.0, 0.0, 0.0, 0.0]`
+
+#### Depth-to-Color Extrinsics
+- **Rotation (3×3):**
+  ```text
+  [ 0.9999892115592957, -0.004639937076717615, -0.00007807503425283358 ]
+  [ 0.004640140105038881,  0.9999852180480957,   0.0028337170369923115 ]
+  [ 0.00006492561078630388, -0.0028340488206595182, 0.9999960064888 ]
+  ```
+- **Translation (m):** `[0.014403801411390305, -0.00011738666944438592, 0.0005498263635672629]`
+
+### G1
+
+#### Color Intrinsics
+- **Resolution:** `640 × 480`
+- **Model:** `distortion.inverse_brown_conrady`
+- **Focal length:** `fx = 606.2996826171875`, `fy = 606.292236328125`
+- **Principal point:** `cx = 330.7660217285156`, `cy = 252.64605712890625`
+- **Distortion coefficients:** `[0.0, 0.0, 0.0, 0.0, 0.0]`
+
+#### Depth Intrinsics
+- **Resolution:** `640 × 480`
+- **Model:** `distortion.brown_conrady`
+- **Focal length:** `fx = 386.00103759765625`, `fy = 386.00103759765625`
+- **Principal point:** `cx = 320.4173278808594`, `cy = 240.45770263671875`
+- **Distortion coefficients:** `[0.0, 0.0, 0.0, 0.0, 0.0]`
+
+#### Depth-to-Color Extrinsics
+- **Rotation (3×3):**
+  ```text
+  [ 0.999901533126831,  -0.012537548318505287,  0.006302413530647755 ]
+  [ 0.012552149593830109,  0.9999186396598816, -0.002282573375850916 ]
+  [ -0.006273282691836357,  0.002361457562074065,  0.9999775290489197 ]
+  ```
+- **Translation (m):** `[0.01490413211286068, -0.000005230475835560355, 0.00011887117580045015]`
 
 ## Data Schema
 
