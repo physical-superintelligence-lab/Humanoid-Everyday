@@ -193,15 +193,15 @@ Each time step is represented by a Python dictionary with the following fields:
         "leg_state":   np.ndarray((15 or 13,),  dtype=np.float64),  # 15 joint angles for G1, 13 for H1_2
 
         # Leg/waist joint indices
-        #   0: LeftHipYaw
+        #   0: LeftHipYaw for H1; LeftHipPitch for G1
         #   1: LeftHipRoll
-        #   2: LeftHipPitch
+        #   2: LeftHipPitch for H1; LeftHipYaw for G1
         #   3: LeftKnee
         #   4: LeftAnkle
         #   5: LeftAnkleRoll
-        #   6: RightHipYaw
+        #   6: RightHipYaw for H1; RightHipPitch for G1
         #   7: RightHipRoll
-        #   8: RightHipPitch
+        #   8: RightHipPitch for H1; RightHipYaw for G1
         #   9: RightKnee
         #  10: RightAnkle
         #  11: RightAnkleRoll
